@@ -4,15 +4,29 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class DiceRoleSnake extends Application {
 
+    public int rand;
+    public Label randResults;
+
     public static final int Tile_Size = 80;
     public static final int width = 10;
     public static final int height = 10;
+    public Circle player1;
+    public Circle player2;
 
+    public int playerPosition1 = 1;
+    public int PlayerPosition2 = 1;
+
+    public boolean player1Turn = true;
+    public boolean player2Turn = true;
+
+    public static int playerxPos = 
 
     private Group tilegroup = new Group();
     private Parent createContent() {
@@ -28,7 +42,7 @@ public class DiceRoleSnake extends Application {
                 Tile tile = new Tile(Tile_Size, Tile_Size);
                 tile.setTranslateX(j * Tile_Size);
                 tile.setTranslateY(i * Tile_Size);
-                tilegroup.getChildren().add(tile);
+                tilegroup.getChildren().add(tile); // once compiler has finished with this line, it goes back to beginning of for loop and make sure it keeps running until the value of J and i is equal to the width and height which is 10 and is true.
             }
         }
         return root;
