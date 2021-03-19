@@ -22,9 +22,9 @@ public class DiceRoleSnake extends Application {
 
 
 
-
-        for(int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++){
+        for(int i = 0; i < height; i++) { // firstly we have the condition inside the loop the variable 'i' is less than equal to 'height' and height has a value of 10 which is shown above
+            for (int j = 0; j < width; j++){ // it sees that that 'j' is equal to 0 which is a variable we initialise to 0 and then j less than equal to width and width has the value of 10 also,
+                // which means that this condition is true because j is less than width which means 0 is less than 10
                 Tile tile = new Tile(Tile_Size, Tile_Size);
                 tile.setTranslateX(j * Tile_Size);
                 tile.setTranslateY(i * Tile_Size);
